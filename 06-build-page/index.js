@@ -69,6 +69,7 @@ async function fillHtml(text) {
     });
   }
   const html = fs.createWriteStream(htmlPath);
+  html.write("");
   html.write(htmlText)
 }
 
@@ -97,7 +98,6 @@ function createCssFile() {
 };
 
 async function copyAssets() {
-
   createDir(assetsNew);
 
   function deleteFiles(path, name) {
